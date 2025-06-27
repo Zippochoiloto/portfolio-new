@@ -1,5 +1,8 @@
 import React from 'react'
 import profile from '../assets/images/profile.jpeg'
+import profileSmall from "../assets/images/profile_Small.jpeg"
+import profileMedium from "../assets/images/profile_Medium.jpeg"
+import profileLarge from "../assets/images/profile_Large.jpeg"
 
 export default function Home() {
     const handleScroll = (e, id) => {
@@ -63,11 +66,11 @@ export default function Home() {
                     <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-1 bg-gradient-to-br from-purple-400 to-blue-400">
                         <img
                             src={profile}
-                            srcSet="
-                            /src/assets/images/profile_Small.jpeg 640w,
-                            /src/assets/images/profile_Medium.jpeg 1024w,
-                            /src/assets/images/profile_Large.jpeg 1440w
-                        "
+                            srcSet={`
+                            ${profileSmall} 640w,
+                            ${profileMedium} 1024w,
+                            ${profileLarge} 1440w
+                        `}
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             alt="Andy Avatar"
                             className="w-full h-full object-cover rounded-full bg-white"

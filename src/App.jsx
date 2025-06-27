@@ -4,7 +4,7 @@ import About from "./components/About.jsx";
 import TechStack from "./components/TechStack.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
     return (

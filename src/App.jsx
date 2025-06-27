@@ -4,16 +4,19 @@ import About from "./components/About.jsx";
 import TechStack from "./components/TechStack.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-
+import { Analytics } from "@vercel/analytics/next"
 
 export default function App() {
     return (
-        <div className=" space-y-16 scroll-smooth" >
-            <Home/>
-            <About/>
-            <TechStack/>
-            <Projects/>
-            <Contact/>
-        </div>
+        <>
+            <div className=" space-y-16 scroll-smooth">
+                <Home/>
+                <About/>
+                <TechStack/>
+                <Projects/>
+                <Contact/>
+                <Analytics/>
+            </div>
+        </>
     )
 }

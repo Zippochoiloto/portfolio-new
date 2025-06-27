@@ -35,9 +35,9 @@ export default function Home() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Download Resume"
-                        className="hover:text-green-600"
+                        className="px-4 py-2 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-md hover:from-green-500 hover:to-green-700 transition"
                     >
-                        <i className="fas fa-file-download text-xl"></i>
+                        Download CV
                     </a>
                 </nav>
             </header>

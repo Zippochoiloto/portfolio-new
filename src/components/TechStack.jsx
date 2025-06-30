@@ -15,6 +15,7 @@ export default function TechStack() {
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg', name: 'Postgresql' },
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg', name: 'Mongodb' },
         { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', name: 'Python' },
+        { img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg', name: 'Golang' },
     ]
 
     return (

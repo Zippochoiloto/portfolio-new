@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import profile from '../assets/images/profile.jpeg'
 import profileSmall from "../assets/images/profile_Small.jpeg"
 import profileMedium from "../assets/images/profile_Medium.jpeg"
 import profileLarge from "../assets/images/profile_Large.jpeg"
+import ChatBox from "./ChatBox.jsx";
+import assistantIcon from '../assets/images/robot-assistant.png'
+import {AnimatePresence} from "framer-motion";
 
 export default function Home() {
+    const [isChatOpen, setIsChatOpen] = useState(false)
     const handleScroll = (e, id) => {
         e.preventDefault()
         const el = document.getElementById(id)
@@ -76,6 +80,23 @@ export default function Home() {
                             className="w-full h-full object-cover rounded-full bg-white"
                         />
                     </div>
+                </div>
+                <div className="fixed bottom-6 right-6 z-50">
+                    {!isChatOpen && (
+                        <button
+                            onClick={() => setIsChatOpen(true)}
+                            className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center hover:scale-105 transition transform duration-200 shadow-xl"
+                        >
+                            <img src={assistantIcon} alt="AI Assistant" className="w-10 h-10" />
+                        </button>
+                    )}
+                    <AnimatePresence>
+                    {isChatOpen && (
+                        <div className="relative">
+                            <ChatBox onClose={() => setIsChatOpen(false)} />
+                        </div>
+                    )}
+                    </AnimatePresence>
                 </div>
             </section>
         </>
